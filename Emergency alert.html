@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Emergency alert</title>
+    <style>
+.button {
+  background-color: red; 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button5 {border-radius: 50%;}
+      b.havor{
+        background-color: yellow;
+      }
+
+       a:hover {
+      background-color: #ddd;
+      color: black;
+</style>
+  </head>
+  <center>
+<body>
+<h1>Click the button to get your coordinates.</h1>
+<button onclick="getLocation()" class="button button5">CLICK TO GENERATE </button>
+<p id="demo"></p>
+<form action="mailto:s73494668@gmail.com" method="post" subject=HElPNEEDED&message=I'm stuck at this place, please do reach me out soon>
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+function showPosition(position) 
+{
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+<button class="button button5">submit</button>
+</form>
+</body>  
+</html>
